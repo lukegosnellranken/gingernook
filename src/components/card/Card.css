@@ -1,0 +1,15 @@
+#card {
+    background-color: silver;
+    width: 45%;
+    /* margin-left: 2%; */
+    border-radius: 2.5%;
+    box-shadow: 0em 0em .5em .5em rgba(255, 136, 0, 0.199);
+}
+
+#title {
+    color: rgb(255, 81, 0);
+    font-family: Borel, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: .5em;
+}

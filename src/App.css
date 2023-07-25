@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(233, 226, 226);
+}
+
+body, html{
+    margin:0;
+    padding:0;
+}
+
+/* #appDiv {
+    background-color: whitesmoke;
+    border-style: solid;
+    border-color: rgb(226, 218, 218);
+    border-width: 1px;
+    border-radius: 25px;
+} */
