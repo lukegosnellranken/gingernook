@@ -8,7 +8,7 @@ function Home() {
         <div>
             <div id="card-div">
                 <Card
-                    title = "Articles"
+                    title = "Latest Articles"
                 />
                 <Card
                     title = "Store"

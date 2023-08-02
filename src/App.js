@@ -5,6 +5,10 @@ import './App.css';
 import ContentArea from './components/content-area/ContentArea';
 
 function App() {
+  // fetch('http://localhost:1337/api/articles')
+  //   .then(res => {return res.json()})
+  //   .then(data => {console.log(data)})
+  //   .catch(error => {console.log(error)});
   return (
     <div id='appDiv'>
       <Nav/>
