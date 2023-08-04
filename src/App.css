@@ -1,5 +1,7 @@
 body {
     background-color: rgb(233, 226, 226);
+    background-image: url("./images/background3.png");
+    background-repeat: repeat-x;
 }
 
 body, html{

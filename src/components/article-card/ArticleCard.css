@@ -5,3 +5,10 @@
     box-shadow: 0em 0em .5em .5em rgba(255, 136, 0, 0.199);
     text-align: center;
 }
+
+.date {
+    font-size: 80%;
+    color: gray;
+    letter-spacing: .05em;
+    padding-top: -5em;
+}

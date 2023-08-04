@@ -1,11 +1,26 @@
 #card {
     background-color: rgb(230, 224, 224);
+    background-image: url('../../images/background3.png');
     width: 80%;
-    border-radius: 2.5%;
-    box-shadow: 0em 0em .5em .5em rgba(255, 136, 0, 0.199);
+    /* border-style: solid; */
+    border-radius: .5%;
+    /* border-color:rgb(131, 68, 17); */
+    border-width: .5em;
+    /* box-shadow: 0em 0em .5em .5em rgba(255, 136, 0, 0.199); */
+    box-shadow: 0em 0em .5em .15em rgba(14, 13, 13, 0.199);
     margin-top: 5em;
     margin-left: auto;
     margin-right: auto;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+#stitch-div {
+    margin-left: .2em;
+    margin-right: .2em;
+    border-width: .1em;
+    border-style: dashed;
+    border-color: rgb(187, 184, 184);
 }
 
 #title {

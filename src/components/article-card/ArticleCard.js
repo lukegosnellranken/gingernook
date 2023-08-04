@@ -4,7 +4,8 @@ import './ArticleCard.css';
 function ArticleCard(props) {
     return (
         <div className="article-card">
-            <p>{props.title}</p>
+            <p className="title">{props.title}</p>
+            <p className="date">{props.date}</p>
         </div>
     );
 }
