@@ -12,7 +12,7 @@ function Card(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch('http://localhost:1337/api/articles')
+            const result = await fetch('http://localhost:1337/api/articles?populate=*')
             .then(res => {
                 if (res.ok) {
                     return res.json()
@@ -23,10 +23,12 @@ function Card(props) {
             .then(data => {
                 setTitleArray(arr => []);
                 for (let i = 0; i < data.data.length; i++) {
+                    let title = data.data[i].attributes.Title;
                     let dateString = data.data[i].attributes.Date.replaceAll("-","/");
                     dateString = dateString.slice(5) + "/" + dateString.slice(0,4);
+                    let image = data.data[i].attributes.Media.data.attributes.formats.thumbnail.url;
                     setTitleArray(arr => 
-                        [...arr, [data.data[i].attributes.Title, dateString]]
+                        [...arr, [title, dateString, image]]
                     );
                 }
                 // console.log("first object: " + titleArray[0]);
@@ -47,14 +49,17 @@ function Card(props) {
                     <ArticleCard
                         title = {titleArray[titleArray.length-1][0]}
                         date = {titleArray[titleArray.length-1][1]}
+                        image = {titleArray[titleArray.length-1][2]}
                     />
                     <ArticleCard
                         title = {titleArray[titleArray.length-2][0]}
-                        date = {titleArray[titleArray.length-1][1]}
+                        date = {titleArray[titleArray.length-2][1]}
+                        image = {titleArray[titleArray.length-2][2]}
                     />
                     <ArticleCard
                         title = {titleArray[titleArray.length-3][0]}
-                        date = {titleArray[titleArray.length-1][1]}
+                        date = {titleArray[titleArray.length-3][1]}
+                        image = {titleArray[titleArray.length-3][2]}
                     />
                 </div>
             </div>
