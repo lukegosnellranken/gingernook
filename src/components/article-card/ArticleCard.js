@@ -14,6 +14,9 @@ function ArticleCard(props) {
                 <div className="div-date">
                     <p className="date">{props.date}</p>
                 </div>
+                <div className="div-description">
+                    <p className="description">{props.description}</p>
+                </div>
             </div>
         </div>
     );

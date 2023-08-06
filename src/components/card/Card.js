@@ -3,11 +3,14 @@ import { useState, useEffect } from "react";
 import './Card.css';
 import ArticleCard from "../article-card/ArticleCard";
 
+let arraySetFlag = false;
+
 function Card(props) {
     let [titleArray, setTitleArray] = useState([
-        ["loading...", "loading..."],
-        ["loading...", "loading..."],
-        ["loading...", "loading..."]
+        // ["loading...", "loading...", "loading...", "loading..."],
+        // ["loading...", "loading...", "loading...", "loading..."],
+        // ["loading...", "loading...", "loading...", "loading..."]
+        []
     ]);
 
     useEffect(() => {
@@ -27,10 +30,12 @@ function Card(props) {
                     let dateString = data.data[i].attributes.Date.replaceAll("-","/");
                     dateString = dateString.slice(5) + "/" + dateString.slice(0,4);
                     let image = data.data[i].attributes.Media.data.attributes.formats.thumbnail.url;
+                    let description = data.data[i].attributes.Description;
                     setTitleArray(arr => 
-                        [...arr, [title, dateString, image]]
+                        [...arr, [title, dateString, image, description]]
                     );
                 }
+                arraySetFlag = true;
                 // console.log("first object: " + titleArray[0]);
                 // console.log("second object: " + titleArray[1]);
             })
@@ -39,28 +44,24 @@ function Card(props) {
         fetchData();
     }, []);
 
-    console.log(titleArray);
+    // console.log(titleArray);
 
     return (
         <div id="card">
             <div id="stitch-div">
                 <h1 id="title">{props.title}</h1>
                 <div id="article-card-div">
-                    <ArticleCard
-                        title = {titleArray[titleArray.length-1][0]}
-                        date = {titleArray[titleArray.length-1][1]}
-                        image = {titleArray[titleArray.length-1][2]}
-                    />
-                    <ArticleCard
-                        title = {titleArray[titleArray.length-2][0]}
-                        date = {titleArray[titleArray.length-2][1]}
-                        image = {titleArray[titleArray.length-2][2]}
-                    />
-                    <ArticleCard
-                        title = {titleArray[titleArray.length-3][0]}
-                        date = {titleArray[titleArray.length-3][1]}
-                        image = {titleArray[titleArray.length-3][2]}
-                    />
+                    {titleArray.map((article, i) => (
+                        <div key={i}> 
+                            {console.log(article)}
+                            <ArticleCard
+                                title = {titleArray[titleArray.length-(i+1)][0]}
+                                date = {titleArray[titleArray.length-(i+1)][1]}
+                                image = {titleArray[titleArray.length-(i+1)][2]}
+                                description = {titleArray[titleArray.length-(i+1)][3]}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -57,3 +57,19 @@
     margin-left: 2em;
     font-family: Inter, sans-serif;
 }
+
+.div-description {
+    display: flex;
+    justify-content: left;
+}
+
+.description {
+    padding: 0;
+    margin: 0;
+    margin-left: 1.5em;
+    margin-top: .5em;
+    font-family: Inter, sans-serif;
+    color: rgb(64, 65, 66);
+    text-align: left;
+    width: 80%;
+}
