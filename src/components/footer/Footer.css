@@ -1,0 +1,9 @@
+#div-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-text {
+    text-align: center;
+    color: gray;
+}

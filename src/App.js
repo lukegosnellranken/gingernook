@@ -3,6 +3,7 @@ import Nav from './components/navbar/Nav';
 import Background from './components/background/background';
 import './App.css';
 import ContentArea from './components/content-area/ContentArea';
+import Footer from './components/footer/Footer';
 
 function App() {
   // fetch('http://localhost:1337/api/articles')
@@ -14,6 +15,7 @@ function App() {
       <Nav/>
       <Background/>
       <ContentArea/>
+      <Footer />
     </div>
   );
 }
