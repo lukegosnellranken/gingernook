@@ -2,20 +2,16 @@ import React from "react";
 import { useState, useEffect } from "react";
 import './Card.css';
 import ArticleCard from "../article-card/ArticleCard";
-
-let arraySetFlag = false;
+import ReactPaginate from 'react-paginate';
 
 function Card(props) {
-    let [titleArray, setTitleArray] = useState([
-        // ["loading...", "loading...", "loading...", "loading..."],
-        // ["loading...", "loading...", "loading...", "loading..."],
-        // ["loading...", "loading...", "loading...", "loading..."]
-        []
-    ]);
+    let [initDataArray, setInitDataArray] = useState([]);
+
+    let [currentItems, setCurrentItems] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch('http://localhost:1337/api/articles?populate=*')
+            await fetch('http://localhost:1337/api/articles?populate=*')
             .then(res => {
                 if (res.ok) {
                     return res.json()
@@ -24,44 +20,99 @@ function Card(props) {
                 }
             })
             .then(data => {
-                setTitleArray(arr => []);
+                let iArray = [];
                 for (let i = 0; i < data.data.length; i++) {
                     let title = data.data[i].attributes.Title;
                     let dateString = data.data[i].attributes.Date.replaceAll("-","/");
                     dateString = dateString.slice(5) + "/" + dateString.slice(0,4);
                     let image = data.data[i].attributes.Media.data.attributes.formats.thumbnail.url;
                     let description = data.data[i].attributes.Description;
-                    setTitleArray(arr => 
-                        [...arr, [title, dateString, image, description]]
-                    );
+                    iArray.push([title, dateString, image, description]);
                 }
-                arraySetFlag = true;
-                // console.log("first object: " + titleArray[0]);
-                // console.log("second object: " + titleArray[1]);
+                setInitDataArray(iArray);
             })
             .catch(error => {console.log(error)});
         }
         fetchData();
     }, []);
+    
+    function PaginatedItems({ itemsPerPage }) {
+        // We start with an empty list of items.
+        
+        const [pageCount, setPageCount] = useState(0);
+        // Here we use item offsets; we could also use page offsets
+        // following the API or data you're working with.
+        const [itemOffset, setItemOffset] = useState(0);
+        
+        useEffect(() => {
+            // Fetch items from another resources.
+            const endOffset = itemOffset + itemsPerPage;
+            setPageCount(Math.ceil(initDataArray.length / itemsPerPage));
+            if (currentItems.length < 1) {
+                setCurrentItems(initDataArray.slice(itemOffset, endOffset));
+            }
+        }, [itemOffset, itemsPerPage]);
 
-    // console.log(titleArray);
+        // Invoke when user click to request another page.
+        const handlePageClick = (event) => {
+            const newOffset = event.selected * itemsPerPage % initDataArray.length;
+            console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
+            setItemOffset(newOffset);
+        };
 
+        return (
+            <div id="div-pagination">
+                <ReactPaginate
+                    nextLabel="next >"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={3}
+                    marginPagesDisplayed={2}
+                    pageCount={pageCount}
+                    previousLabel="< previous"
+                    pageClassName="page-item"
+                    pageLinkClassName="page-link"
+                    previousClassName="page-item"
+                    previousLinkClassName="page-link"
+                    nextClassName="page-item"
+                    nextLinkClassName="page-link"
+                    breakLabel="..."
+                    breakClassName="page-item"
+                    breakLinkClassName="page-link"
+                    containerClassName="pagination"
+                    activeClassName="active"
+                    renderOnZeroPageCount={null}
+                />
+                <p>hello world.</p>
+            </div>
+        );
+    }
+
+
+    function Items({ currentItems }) {
+        return (
+            <div id="article-card-div">
+                {currentItems && currentItems.map((article, i) => (
+                    <div key={i}>
+                        <ArticleCard
+                            title = {currentItems[currentItems.length-(i+1)][0]}
+                            date = {currentItems[currentItems.length-(i+1)][1]}
+                            image = {currentItems[currentItems.length-(i+1)][2]}
+                            description = {currentItems[currentItems.length-(i+1)][3]}
+                        />
+                    </div>
+                ))}
+            </div>
+        );
+    }
+    
     return (
-        <div id="card">
-            <div id="stitch-div">
-                <h1 id="title">{props.title}</h1>
-                <div id="article-card-div">
-                    {titleArray.map((article, i) => (
-                        <div key={i}> 
-                            {console.log(article)}
-                            <ArticleCard
-                                title = {titleArray[titleArray.length-(i+1)][0]}
-                                date = {titleArray[titleArray.length-(i+1)][1]}
-                                image = {titleArray[titleArray.length-(i+1)][2]}
-                                description = {titleArray[titleArray.length-(i+1)][3]}
-                            />
-                        </div>
-                    ))}
+        <div id="container">
+            <div id="card">
+                <div id="stitch-div">
+                    <h1 id="title">{props.title}</h1>
+                    <Items currentItems={currentItems} />
+                    <PaginatedItems itemsPerPage={2} />
+                    {console.log("rerendered!")}
                 </div>
             </div>
         </div>

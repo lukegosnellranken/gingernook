@@ -38,3 +38,8 @@
     /* justify-content: space-evenly; */
     padding-bottom: 2em;
 }
+
+#div-pagination {
+    display: flex;
+    background-color: blue;
+}
