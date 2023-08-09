@@ -6,7 +6,6 @@ import ReactPaginate from 'react-paginate';
 
 function Card(props) {
     let [initDataArray, setInitDataArray] = useState([]);
-
     let [currentItems, setCurrentItems] = useState([]);
 
     useEffect(() => {
@@ -49,7 +48,7 @@ function Card(props) {
             const endOffset = itemOffset + itemsPerPage;
             setPageCount(Math.ceil(initDataArray.length / itemsPerPage));
             if (currentItems.length < 1) {
-                setCurrentItems(initDataArray.slice(itemOffset, endOffset));
+                setCurrentItems(initDataArray.reverse().slice(itemOffset, endOffset));
             }
         }, [itemOffset, itemsPerPage]);
 
@@ -82,7 +81,6 @@ function Card(props) {
                     activeClassName="active"
                     renderOnZeroPageCount={null}
                 />
-                <p>hello world.</p>
             </div>
         );
     }
