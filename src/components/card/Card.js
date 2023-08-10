@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import './Card.css';
 import ArticleCard from "../article-card/ArticleCard";
 import ReactPaginate from 'react-paginate';
+import { render } from "@testing-library/react";
 
 function Card(props) {
     let [initDataArray, setInitDataArray] = useState([]);
-    let [currentItems, setCurrentItems] = useState([]);
+    // let [currentItems, setCurrentItems] = useState([]);
+    let currentItems = [];
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,9 +49,11 @@ function Card(props) {
             // Fetch items from another resources.
             const endOffset = itemOffset + itemsPerPage;
             setPageCount(Math.ceil(initDataArray.length / itemsPerPage));
-            if (currentItems.length < 1) {
-                setCurrentItems(initDataArray.reverse().slice(itemOffset, endOffset));
-            }
+            // if (currentItems.length < 1) {
+                // setCurrentItems(initDataArray.slice(itemOffset, endOffset));
+                currentItems = initDataArray.slice(itemOffset, endOffset);
+                console.log(currentItems);
+            // }
         }, [itemOffset, itemsPerPage]);
 
         // Invoke when user click to request another page.
@@ -60,31 +64,36 @@ function Card(props) {
         };
 
         return (
-            <div id="div-pagination">
-                <ReactPaginate
-                    nextLabel="next >"
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={3}
-                    marginPagesDisplayed={2}
-                    pageCount={pageCount}
-                    previousLabel="< previous"
-                    pageClassName="page-item"
-                    pageLinkClassName="page-link"
-                    previousClassName="page-item"
-                    previousLinkClassName="page-link"
-                    nextClassName="page-item"
-                    nextLinkClassName="page-link"
-                    breakLabel="..."
-                    breakClassName="page-item"
-                    breakLinkClassName="page-link"
-                    containerClassName="pagination"
-                    activeClassName="active"
-                    renderOnZeroPageCount={null}
-                />
+            <div id="div-items-pagination">
+                <div id="div-items">
+                    <Items currentItems={currentItems} />
+                    <div id="div-pagination">
+                        <ReactPaginate
+                            nextLabel="next >"
+                            onPageChange={handlePageClick}
+                            pageRangeDisplayed={3}
+                            marginPagesDisplayed={2}
+                            pageCount={pageCount}
+                            previousLabel="< previous"
+                            pageClassName="page-item"
+                            pageLinkClassName="page-link"
+                            previousClassName="page-item"
+                            previousLinkClassName="page-link"
+                            nextClassName="page-item"
+                            nextLinkClassName="page-link"
+                            breakLabel="..."
+                            breakClassName="page-item"
+                            breakLinkClassName="page-link"
+                            containerClassName="pagination"
+                            activeClassName="active"
+                            renderOnZeroPageCount={null}
+                        />
+                    </div>
+                </div>
             </div>
+            
         );
     }
-
 
     function Items({ currentItems }) {
         return (
@@ -108,7 +117,6 @@ function Card(props) {
             <div id="card">
                 <div id="stitch-div">
                     <h1 id="title">{props.title}</h1>
-                    <Items currentItems={currentItems} />
                     <PaginatedItems itemsPerPage={2} />
                     {console.log("rerendered!")}
                 </div>
