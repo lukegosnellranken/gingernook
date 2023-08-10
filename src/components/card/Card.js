@@ -7,8 +7,7 @@ import { render } from "@testing-library/react";
 
 function Card(props) {
     let [initDataArray, setInitDataArray] = useState([]);
-    // let [currentItems, setCurrentItems] = useState([]);
-    let currentItems = [];
+    console.log(initDataArray);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -30,7 +29,7 @@ function Card(props) {
                     let description = data.data[i].attributes.Description;
                     iArray.push([title, dateString, image, description]);
                 }
-                setInitDataArray(iArray);
+                setInitDataArray(iArray.reverse());
             })
             .catch(error => {console.log(error)});
         }
@@ -39,7 +38,7 @@ function Card(props) {
     
     function PaginatedItems({ itemsPerPage }) {
         // We start with an empty list of items.
-        
+        let [currentItems, setCurrentItems] = useState([]);
         const [pageCount, setPageCount] = useState(0);
         // Here we use item offsets; we could also use page offsets
         // following the API or data you're working with.
@@ -49,11 +48,7 @@ function Card(props) {
             // Fetch items from another resources.
             const endOffset = itemOffset + itemsPerPage;
             setPageCount(Math.ceil(initDataArray.length / itemsPerPage));
-            // if (currentItems.length < 1) {
-                // setCurrentItems(initDataArray.slice(itemOffset, endOffset));
-                currentItems = initDataArray.slice(itemOffset, endOffset);
-                console.log(currentItems);
-            // }
+            setCurrentItems(initDataArray.slice(itemOffset, endOffset));
         }, [itemOffset, itemsPerPage]);
 
         // Invoke when user click to request another page.
@@ -96,9 +91,10 @@ function Card(props) {
     }
 
     function Items({ currentItems }) {
+        console.log("rerendered Items return!");
         return (
-            <div id="article-card-div">
-                {currentItems && currentItems.map((article, i) => (
+            <div id="article-card-div">      
+                {currentItems.reverse().map((article, i) => (
                     <div key={i}>
                         <ArticleCard
                             title = {currentItems[currentItems.length-(i+1)][0]}
@@ -118,7 +114,7 @@ function Card(props) {
                 <div id="stitch-div">
                     <h1 id="title">{props.title}</h1>
                     <PaginatedItems itemsPerPage={2} />
-                    {console.log("rerendered!")}
+                    {console.log("rerendered Card return!")}
                 </div>
             </div>
         </div>
