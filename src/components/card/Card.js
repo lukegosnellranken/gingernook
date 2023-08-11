@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import './Card.css';
 import ArticleCard from "../article-card/ArticleCard";
 import ReactPaginate from 'react-paginate';
-import { render } from "@testing-library/react";
+// import { render } from "@testing-library/react";
 
 function Card(props) {
     let [initDataArray, setInitDataArray] = useState([]);
@@ -64,12 +64,12 @@ function Card(props) {
                     <Items currentItems={currentItems} />
                     <div id="div-pagination">
                         <ReactPaginate
-                            nextLabel="next >"
+                            nextLabel=">"
                             onPageChange={handlePageClick}
                             pageRangeDisplayed={3}
                             marginPagesDisplayed={2}
                             pageCount={pageCount}
-                            previousLabel="< previous"
+                            previousLabel="<"
                             pageClassName="page-item"
                             pageLinkClassName="page-link"
                             previousClassName="page-item"
