@@ -1,5 +1,6 @@
 #card {
-    background-color: rgb(230, 224, 224);
+    /* background-color: rgb(230, 224, 224); */
+    background-color: rgb(250, 246, 246);
     background-image: url('../../images/background3.png');
     width: 80%;
     /* border-style: solid; */
@@ -28,7 +29,7 @@
     font-family: Borel, sans-serif;
     font-weight: lighter;
     text-align: center;
-    padding-top: .5em;
+    padding-top: 1em;
 }
 
 #article-card-div {

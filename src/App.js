@@ -2,8 +2,9 @@ import React from 'react';
 import Nav from './components/navbar/Nav';
 import Background from './components/background/background';
 import './App.css';
-import ContentArea from './components/content-area/ContentArea';
 import Footer from './components/footer/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   // fetch('http://localhost:1337/api/articles')
@@ -14,8 +15,12 @@ function App() {
     <div id='appDiv'>
       <Nav/>
       <Background/>
-      <ContentArea/>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home/>}/>
+        </Routes>
+      </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
