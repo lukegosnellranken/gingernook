@@ -4,6 +4,7 @@ import './Card.css';
 import ArticleCard from "../article-card/ArticleCard";
 import ReactPaginate from 'react-paginate';
 // import { render } from "@testing-library/react";
+import { Link } from "react-router-dom";
 
 function Card(props) {
     let [initDataArray, setInitDataArray] = useState([]);
@@ -97,6 +98,7 @@ function Card(props) {
                 {currentItems.reverse().map((article, i) => (
                     <div key={i}>
                         <ArticleCard
+                            sub = {`/articles/${(currentItems[currentItems.length-(i+1)][0]).replace(/\s+/g, '-').toLowerCase()}`}
                             title = {currentItems[currentItems.length-(i+1)][0]}
                             date = {currentItems[currentItems.length-(i+1)][1]}
                             image = {currentItems[currentItems.length-(i+1)][2]}

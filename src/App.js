@@ -5,6 +5,8 @@ import './App.css';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Article from './pages/Article';
+import NotFound from './pages/NotFound';
 
 function App() {
   // fetch('http://localhost:1337/api/articles')
@@ -18,6 +20,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/>
+          <Route path='/articles/1' element={<Article/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
       <Footer/>
