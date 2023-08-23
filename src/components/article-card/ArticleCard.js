@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ArticleCard(props) {
     return (
-        <a id="article-card-link" href={props.sub}>
+        <Link to={props.sub}>
             <div className="article-card">
                 <div className="div-image">
                     <img src={"http://localhost:1337" + props.image} alt="" className="image" />
@@ -21,7 +21,7 @@ function ArticleCard(props) {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }
 
