@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/>
-          <Route path='/articles/1' element={<Article/>}/>
+          <Route path='/articles/:id' element={<Article/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>

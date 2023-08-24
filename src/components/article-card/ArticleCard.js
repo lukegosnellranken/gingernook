@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ArticleCard(props) {
     return (
-        <Link to={props.sub}>
+        <Link to={props.sub} className="article-link">
             <div className="article-card">
                 <div className="div-image">
                     <img src={"http://localhost:1337" + props.image} alt="" className="image" />
