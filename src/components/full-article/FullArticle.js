@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import './FullArticle.css';
+import ReactMarkdown from 'react-markdown'
 
 function FullArticle() {
     let [initDataArray, setInitDataArray] = useState([]);
@@ -71,7 +72,7 @@ function FullArticle() {
                     <img src={"http://localhost:1337" + articleDataArray[0][2]} alt="" id="p-image" />
                 </div>
                 <div id="div-content">
-                    <p id="p-content">{articleDataArray[0][3]}</p>
+                    <p id="p-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></p>
                 </div>
             </div>
         </div>

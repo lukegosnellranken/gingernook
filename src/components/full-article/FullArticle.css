@@ -46,12 +46,15 @@
     padding-top: 1em;
     font-weight: bold;
     font-size: 120%;
+    color: rgb(64, 65, 66);
+    font-size: 140%;
 }
 
 #p-date {
     font-family: Inter, sans-serif;
-    font-size: 80%;;
+    font-size: 80%;
     color: gray;
+    letter-spacing: .05em;
 }
 
 #p-image {
@@ -63,4 +66,5 @@
 
 #p-content {
     width: 80%;
+    font-family: Inter, sans-serif;
 }
