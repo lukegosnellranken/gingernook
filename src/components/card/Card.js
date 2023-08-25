@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import './Card.css';
 import ArticleCard from "../article-card/ArticleCard";
 import ReactPaginate from 'react-paginate';
-// import { render } from "@testing-library/react";
-// import { Link } from "react-router-dom";
 
 function Card(props) {
     let [initDataArray, setInitDataArray] = useState([]);

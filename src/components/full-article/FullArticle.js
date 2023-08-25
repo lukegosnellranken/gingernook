@@ -5,7 +5,10 @@ import './FullArticle.css';
 
 function FullArticle() {
     let [initDataArray, setInitDataArray] = useState([]);
-    let [articleDataArray, setArticleDataArray] = useState([]);
+    // Set filler items in array so that the return does not cause an error on the initial render
+    let [articleDataArray, setArticleDataArray] = useState([["Loading...", "Loading...", "Loading..."]]);
+    console.log(articleDataArray);
+    const { id } = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,26 +36,28 @@ function FullArticle() {
         fetchData();
     }, []);
 
-    const { id } = useParams();
-
     console.log("test " + id);
-    for (let i = 0; i < initDataArray.length; i++) {
-        if (initDataArray[i][0].replace(/\s+/g, '-').toLowerCase() === id) {
-            console.log('yes!');
-            let iArray = [];
-            let title = initDataArray[i][0];
-            let dateString = initDataArray[i][1];
-            let image = initDataArray[i][2];
-            iArray.push([title, dateString, image]);
+    useEffect(() => {
+        let iArray = [];
+        for (let i = 0; i < initDataArray.length; i++) {
+            if (initDataArray[i][0].replace(/\s+/g, '-').toLowerCase() === id) {
+                console.log('yes!');
+                let title = initDataArray[i][0];
+                let dateString = initDataArray[i][1];
+                let image = initDataArray[i][2];
+                iArray.push([title, dateString, image]);
+            }
+        }
+        // Only set articleDataArray if iArray is populated so that it is not set to an empty array, causing an unnecessary
+        // re-render and an error in the return, which would call a non-existent object in articleDataArray
+        if (iArray.length > 0) {
             setArticleDataArray(iArray);
         }
-    }
-    console.log("articleData");
-    console.log(articleDataArray);
+    }, [initDataArray, id]);
 
     return (
         <div id="full-article-card">
-            <p>Title</p>
+            <p>{articleDataArray[0][0]}</p>
             <p>Content</p>
         </div>
     )
