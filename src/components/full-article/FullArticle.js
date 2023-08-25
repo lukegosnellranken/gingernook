@@ -6,7 +6,7 @@ import './FullArticle.css';
 function FullArticle() {
     let [initDataArray, setInitDataArray] = useState([]);
     // Set filler items in array so that the return does not cause an error on the initial render
-    let [articleDataArray, setArticleDataArray] = useState([["Loading...", "Loading...", "Loading..."]]);
+    let [articleDataArray, setArticleDataArray] = useState([["Loading...", "Loading...", "Loading...", "Loading..."]]);
     console.log(articleDataArray);
     const { id } = useParams();
 
@@ -27,7 +27,9 @@ function FullArticle() {
                     let dateString = data.data[i].attributes.Date.replaceAll("-","/");
                     dateString = dateString.slice(5) + "/" + dateString.slice(0,4);
                     let image = data.data[i].attributes.Media.data.attributes.formats.thumbnail.url;
-                    iArray.push([title, dateString, image]);
+                    let content = data.data[i].attributes.Content;
+                    // console.log(content);
+                    iArray.push([title, dateString, image, content]);
                 }
                 setInitDataArray(iArray.reverse());
             })
@@ -45,7 +47,8 @@ function FullArticle() {
                 let title = initDataArray[i][0];
                 let dateString = initDataArray[i][1];
                 let image = initDataArray[i][2];
-                iArray.push([title, dateString, image]);
+                let content = initDataArray[i][3];
+                iArray.push([title, dateString, image, content]);
             }
         }
         // Only set articleDataArray if iArray is populated so that it is not set to an empty array, causing an unnecessary
@@ -57,8 +60,20 @@ function FullArticle() {
 
     return (
         <div id="full-article-card">
-            <p>{articleDataArray[0][0]}</p>
-            <p>Content</p>
+            <div id="stitch-div">
+                <div id="div-title">
+                    <p id="p-title">{articleDataArray[0][0]}</p>
+                </div>
+                <div id="div-date">
+                    <p id="p-date">{articleDataArray[0][1]}</p>
+                </div>
+                <div id="div-image">
+                    <img src={"http://localhost:1337" + articleDataArray[0][2]} alt="" id="p-image" />
+                </div>
+                <div id="div-content">
+                    <p id="p-content">{articleDataArray[0][3]}</p>
+                </div>
+            </div>
         </div>
     )
 }
