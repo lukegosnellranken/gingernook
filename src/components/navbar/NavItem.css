@@ -3,3 +3,10 @@
     font-size: medium;
     font-family: Inter, sans-serif;
 }
+
+.nav-list-item a {
+    text-decoration: none;
+    color: green;
+    font-size: medium;
+    font-family: Inter, sans-serif;
+}

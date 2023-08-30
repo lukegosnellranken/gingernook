@@ -1,6 +1,19 @@
+#home-container {
+    display: flex;
+    justify-content: center;
+}
+
 #card-div {
     display: block;
-    /* justify-content: center; */
-    /* padding-top: 1em; */
-    /* background-color: silver; */
+    width: 66%;
+    padding-left: 3%;
+    padding-right: .75%;
+    
+}
+
+#side-card-div {
+    display: block;
+    width: 33%;
+    padding-left: .75%;
+    padding-right: 3%;
 }

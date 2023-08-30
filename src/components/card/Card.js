@@ -109,13 +109,13 @@ function Card(props) {
     }
     
     return (
-        <div id="container">
-            <div id="card">
-                <div id="stitch-div">
+        <div id="card">
+            <div id="stitch-div">
+                <div id="title-div">
                     <h1 id="title">{props.title}</h1>
-                    <PaginatedItems itemsPerPage={2} />
-                    {console.log("rerendered Card return!")}
                 </div>
+                <PaginatedItems itemsPerPage={2} />
+                {console.log("rerendered Card return!")}
             </div>
         </div>
     );

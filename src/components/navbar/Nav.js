@@ -11,7 +11,7 @@ function Nav() {
                 <ul className="nav-list">
                     <NavItem name="Life"/>
                     <NavItem name="Recipes"/>
-                    <NavItem name="Our Family"/>
+                    <NavItem name="Our Family" href="our-family"/>
                     <NavItem name="Resources"/>
                 </ul>
             </nav>

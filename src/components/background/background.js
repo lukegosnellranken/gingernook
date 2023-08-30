@@ -6,7 +6,9 @@ function Background() {
     return (
         <div>
             <div id="backgroundFrame">
-                {<img src={logo} alt="logo" id="logo" />}
+                <a href="http://localhost:3000/">
+                    {<img src={logo} alt="logo" id="logo" href="http://localhost:3000"/>}
+                </a>
             </div>
         </div>
     )
