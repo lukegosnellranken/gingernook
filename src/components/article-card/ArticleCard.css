@@ -52,13 +52,13 @@
     justify-content: left;
     margin-left: 1em;
     font-weight: bold;
-    font-size: 140%;
+    font-size: 120%;
     font-family: Inter, sans-serif;
     color: rgb(64, 65, 66);
 }
 
 .date {
-    font-size: 80%;
+    font-size: 70%;
     color: gray;
     letter-spacing: .05em;
     padding: 0;
@@ -81,6 +81,7 @@
     margin-left: 1.5em;
     margin-top: .5em;
     font-family: Inter, sans-serif;
+    font-size: 80%;
     color: rgb(64, 65, 66);
     text-align: left;
     width: 80%;

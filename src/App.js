@@ -18,15 +18,17 @@ function App() {
     <div id='appDiv'>
       <Nav/>
       <Background/>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home/>}/>
-          <Route path='/articles/:id' element={<Article/>}/>
-          <Route path='*' element={<NotFound/>}/>
-          <Route path='/our-family' element={<OurFamily/>}/>
-        </Routes>
-      </BrowserRouter>
-      <Footer/>
+      <div id='div-content-and-footer'>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home/>}/>
+            <Route path='/articles/:id' element={<Article/>}/>
+            <Route path='*' element={<NotFound/>}/>
+            <Route path='/our-family' element={<OurFamily/>}/>
+          </Routes>
+        </BrowserRouter>
+        <Footer/>
+      </div>
     </div>
   );
 }

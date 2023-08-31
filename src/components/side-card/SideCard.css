@@ -10,6 +10,7 @@
     margin-right: auto;
     padding-top: .2em;
     padding-bottom: .2em;
+    font-family: Inter, sans-serif;
 }
 
 #stitch-div {
@@ -18,4 +19,56 @@
     border-width: .1em;
     border-style: dashed;
     border-color: rgb(187, 184, 184);
+}
+
+.sections {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.section-title {
+    text-align: center;
+    padding-top: 5%;
+    font-family: Qwitcher Grypen, sans-serif;
+    font-weight: lighter;
+    font-size: 300%;
+    color: #3c2600;
+    text-shadow: 1px 1px 2px #5c3000;
+    text-decoration: underline dashed gray 1px;
+}
+
+.section-content {
+    font-size: 80%;
+}
+
+#section-1-content {
+    padding-top: 5%;
+}
+
+#section-1-image {
+    /* Border taken from https://codepen.io/mp/pen/kBEeKw */
+    width: 100%;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-1deg);
+    border: solid #5c3000;
+}
+
+#section-2-image {
+    width: 100%;
+    /* position: relative;
+    top: -12em; */
+    z-index:0;
+    opacity: 90%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+}
+
+.section-1-content {
+    padding-top: .5em;
+}
+
+.separator {
+    border-bottom-style: dashed;
+    border-bottom-color: rgb(187, 184, 184);
+    border-bottom-width: .1em;
 }

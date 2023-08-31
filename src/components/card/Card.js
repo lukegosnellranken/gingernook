@@ -114,7 +114,7 @@ function Card(props) {
                 <div id="title-div">
                     <h1 id="title">{props.title}</h1>
                 </div>
-                <PaginatedItems itemsPerPage={2} />
+                <PaginatedItems itemsPerPage={8} />
                 {console.log("rerendered Card return!")}
             </div>
         </div>

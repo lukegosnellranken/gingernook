@@ -20,8 +20,109 @@
     position: relative;
     width: 100%;
     height: 12em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/ginger-background.jpg);
-    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/ginger-background.jpg);   
     background-position: center;
     background-size: cover;
+}
+
+#div-bmc {
+    width: 10em;
+    position: absolute;
+    bottom: .5em;
+    left: .5em;
+}
+
+#image-bmc {
+    width: 100%;
+}
+
+#image-bmc:hover {
+    opacity: 70%;
+}
+
+#social-links {
+    position: absolute;
+    bottom: .75em;
+    right: 2em;
+}
+
+.social-link {
+    border-color: #5c3000;
+}
+
+#social-links-facebook {
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    font-size: 120%;
+    margin-left: .5em;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: .05em;
+}
+
+#social-links-facebook::before {
+    position: relative;
+    bottom: -.20em;
+}
+
+#social-links-pinterest {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    font-size: 120%;
+    margin-left: .5em;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: .05em;
+}
+
+#social-links-pinterest::before {
+    position: relative;
+    bottom: -.15em;
+    left: -.01em;
+}
+
+#social-links-instagram {
+    text-decoration: none;
+    color: white;
+    background-color: purple;
+    font-size: 120%;
+    margin-left: .5em;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: .05em;
+}
+
+#social-links-instagram::before {
+    position: relative;
+    bottom: -.18em;
+    right: -.025em;
+}
+
+#social-links-rss {
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    font-size: 120%;
+    margin-left: .5em;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: .05em;
+}
+
+#social-links-rss::before {
+    position: relative;
+    bottom: -.20em;
+    right: -.05em;
+}
+
+.fa {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+}
+  
+.fa:hover {
+    opacity: 0.7;
 }

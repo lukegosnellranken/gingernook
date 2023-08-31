@@ -1,12 +1,22 @@
 .nav-list-item {
-    color: green;
-    font-size: medium;
-    font-family: Inter, sans-serif;
+    /* color: green; */
 }
 
 .nav-list-item a {
     text-decoration: none;
-    color: green;
-    font-size: medium;
-    font-family: Inter, sans-serif;
+    color: #5c3000;
+    font-size: 200%;
+    font-family: Qwitcher Grypen, sans-serif;
+}
+
+.nav-list-item a:hover {
+    color: #dbcfb7;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-list-item a {
+        font-size: 80%;
+        font-family: Qwitcher Grypen, sans-serif;
+        font-size: 50%;
+    }
 }
