@@ -42,7 +42,10 @@
     border-style: solid;
     border-width: .05em;
     border-color: gray;
-    width: auto;
+    width: 70%;
+    /* border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-1deg);
+    border: solid #5c3000; */
 }
 
 .title {

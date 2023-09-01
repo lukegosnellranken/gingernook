@@ -17,3 +17,32 @@
     padding-left: .75%;
     padding-right: 3%;
 }
+
+#mobile-card-div {
+    display: none;
+    padding-left: 3%;
+    padding-right: .75%;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+    #card-div {
+        width: 100%;
+    }
+
+    #side-card-div {
+        display: none;
+    }
+
+    #mobile-card-div {
+        display: block;
+        width: 100%;
+    }
+
+    #home-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

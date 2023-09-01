@@ -3,13 +3,22 @@ import './Home.css';
 import ContentArea from "../content-area/ContentArea";
 import Card from "../card/Card";
 import SideCard from "../side-card/SideCard";
+import MobileCard from "../mobile-card/MobileCard";
 import { useEffect } from "react";
 import sid from '../../images/sid7.png';
+import sidmobile from '../../images/sid7-mobile.png';
 import beans from '../../images/coffee-beans5.png';
 
 function Home() {
     return (
         <div id="home-container">
+            <div id="mobile-card-div">
+                <MobileCard
+                    title1 = "Welcome to Ginger Nook!"
+                    image1 = {sidmobile}
+                    description1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit vestibulum aliquam. Integer sed luctus mauris, in eleifend est. Praesent aliquet orci nec nisi iaculis pharetra. Donec aliquam neque sit amet laoreet auctor."
+                />
+            </div>
             <div id="card-div">
                 <Card
                     title = "Writings from the Cribside"

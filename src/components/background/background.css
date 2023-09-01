@@ -48,12 +48,19 @@
 
 .social-link {
     border-color: #5c3000;
+    color: white;
+    background-color: #5c3000;
+}
+
+.social-link:hover {
+    opacity: 80%;
+    color: white;
 }
 
 #social-links-facebook {
     text-decoration: none;
-    color: white;
-    background-color: blue;
+    /* color: white;
+    background-color: blue; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
@@ -68,8 +75,8 @@
 
 #social-links-pinterest {
     text-decoration: none;
-    color: white;
-    background-color: red;
+    /* color: white;
+    background-color: red; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
@@ -85,8 +92,8 @@
 
 #social-links-instagram {
     text-decoration: none;
-    color: white;
-    background-color: purple;
+    /* color: white;
+    background-color: purple; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
@@ -102,8 +109,8 @@
 
 #social-links-rss {
     text-decoration: none;
-    color: white;
-    background-color: orange;
+    /* color: white;
+    background-color: orange; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
