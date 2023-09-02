@@ -17,7 +17,7 @@
 }
 
 .nav-list {
-    width: 40%;
+    width: 60%;
     display: flex;
     align-items: center;
     list-style-type: none;
@@ -31,4 +31,16 @@
     display: flex;
     justify-content: left;
     padding-left: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav-list {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-list {
+        width: 80%;
+    }
 }

@@ -13,7 +13,7 @@
     display: block;
     margin: auto;
     width: 12%;
-    min-width: 6em;
+    min-width: 8em;
 }
 
 #backgroundFrame {
@@ -132,4 +132,28 @@
   
 .fa:hover {
     opacity: 0.7;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    #social-links-facebook {
+        font-size: 90%;
+    }
+
+    #social-links-pinterest {
+        font-size: 90%;
+    }
+
+    #social-links-instagram {
+        font-size: 90%;
+    }
+
+    #social-links-rss {
+        font-size: 90%;
+    }
+
+    #div-bmc {
+        width: 7.5em;
+    }    
 }

@@ -30,7 +30,7 @@
     align-items: center;
 }
 
-.div-title-date {
+.div-title-date-description {
     width: 75%;
     margin-top: 1.5%;
     display: flex;
@@ -86,10 +86,70 @@
     font-family: Inter, sans-serif;
     font-size: 80%;
     color: rgb(64, 65, 66);
+    /* color: rgb(0, 80, 0); */
     text-align: left;
     width: 80%;
 }
 
 #article-card-link {
     text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .div-image {
+        width: 40%;
+        margin-left: 0%;
+    }
+
+    .image {
+        margin-left: -2em;
+    }
+
+    .div-title-date-description {
+        width: 70%;
+        margin-right: .5em;
+        margin-left: -2.5em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 100%;
+    }
+
+    .date {
+        font-size: 60%;
+    }
+
+    .description {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .title {
+        font-size: 90%;
+    }
+
+    .description {
+        font-size: 65%;
+    }
+
+    .date {
+        font-size: 55%;
+    }
 }

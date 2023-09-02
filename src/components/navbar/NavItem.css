@@ -15,8 +15,13 @@
 
 @media screen and (max-width: 800px) {
     .nav-list-item a {
-        font-size: 80%;
+        font-size: 200%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-list-item a {
         font-family: Qwitcher Grypen, sans-serif;
-        font-size: 50%;
+        font-size: 150%;
     }
 }

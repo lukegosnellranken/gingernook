@@ -9,7 +9,7 @@ function ArticleCard(props) {
                 <div className="div-image">
                     <img src={"http://localhost:1337" + props.image} alt="" className="image" />
                 </div>
-                <div className="div-title-date">
+                <div className="div-title-date-description">
                     <div className="div-title">
                         <p className="title">{props.title}</p>
                     </div>
