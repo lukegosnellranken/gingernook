@@ -62,15 +62,20 @@ function FullArticle() {
     return (
         <div id="full-article-card">
             <div id="stitch-div">
-                <div id="div-title">
-                    <p id="p-title">{articleDataArray[0][0]}</p>
+                <div id="div-image-title-date">
+                    <div id="div-image">
+                        <img src={"http://localhost:1337" + articleDataArray[0][2]} alt="" id="p-image" />
+                    </div>
+                    <div id="div-title-date">
+                        <div id="div-title">
+                            <p id="p-title">{articleDataArray[0][0]}</p>
+                        </div>
+                        <div id="div-date">
+                            <p id="p-date">{articleDataArray[0][1]}</p>
+                        </div>
+                    </div>
                 </div>
-                <div id="div-date">
-                    <p id="p-date">{articleDataArray[0][1]}</p>
-                </div>
-                <div id="div-image">
-                    <img src={"http://localhost:1337" + articleDataArray[0][2]} alt="" id="p-image" />
-                </div>
+                <div className="separator"></div>
                 <div id="div-content">
                     <p id="p-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></p>
                 </div>

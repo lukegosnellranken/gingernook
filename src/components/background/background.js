@@ -1,6 +1,6 @@
 import React from "react";
 import './background.css';
-import logo from '../../images/gingernooklogo-plain.png';
+import logo from '../../images/gingernooklogo-plain3.png';
 import bmc from '../../images/bmc-logo3.png'; 
 
 function Background() {

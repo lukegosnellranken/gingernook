@@ -27,11 +27,8 @@
     margin-top: .2%;
 }
 
-.logo {
-    display: flex;
-    justify-content: left;
-    padding-left: 5%;
-}
+
+
 
 @media screen and (max-width: 1000px) {
     .nav-list {
@@ -42,5 +39,11 @@
 @media screen and (max-width: 800px) {
     .nav-list {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .nav-list {
+        margin-top: -.5em;
     }
 }

@@ -102,10 +102,10 @@
         margin-top: 1em;
     }
 
-    #title-div {
+    /* #title-div {
         justify-content: left;
         padding-left: 5%;
-    }
+    } */
 }
 
 @media screen and (max-width: 600px) {

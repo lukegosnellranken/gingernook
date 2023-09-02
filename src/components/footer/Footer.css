@@ -8,3 +8,9 @@
     text-align: center;
     color: gray;
 }
+
+@media screen and (max-width: 800px) {
+    #footer-text {
+        font-size: 70%;
+    }
+}
