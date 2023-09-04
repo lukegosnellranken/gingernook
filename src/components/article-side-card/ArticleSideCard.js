@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 function ArticleSideCard(props) {
     let [initDataArray, setInitDataArray] = useState([]);
     let currentItems = initDataArray;
-    let currentArtcle = ['filler'];
+    let currentArticle = ['filler'];
     console.log(initDataArray);
     const { id } = useParams();
 
@@ -32,7 +32,7 @@ function ArticleSideCard(props) {
                     let description = data.data[i].attributes.Description;
                     iArray.push([title, dateString, image, description]);
                 }
-                setInitDataArray(iArray.slice(0,10).reverse());
+                setInitDataArray(iArray.slice(0,8).reverse());
             })
             .catch(error => {console.log(error)});
         }
@@ -43,7 +43,7 @@ function ArticleSideCard(props) {
         // Remove current article from array
         for (let i = 0; i < currentItems.length; i++) { 
             if (currentItems[i][0].replace(/\s+/g, '-').toLowerCase() === id) {
-                currentArtcle = currentItems[i];
+                currentArticle = currentItems[i];
                 currentItems.splice(i, 1);
             }
         }
@@ -63,8 +63,11 @@ function ArticleSideCard(props) {
     }
 
     function restoreCurrentArticle() {
-        if (!currentItems.includes(currentArtcle)) {
-            currentItems.push(currentArtcle);
+        if (!currentItems.includes(currentArticle)) {
+            if (currentArticle !== 'filler') {
+                console.log('filler');
+                currentItems.push(currentArticle);
+            }
         }
     }
 
