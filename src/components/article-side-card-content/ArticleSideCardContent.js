@@ -1,8 +1,8 @@
 import React from "react";
-import './FullArticleCard.css';
+import './ArticleSideCardContent.css';
 import { Link } from "react-router-dom";
 
-function FullArticleCard(props) {
+function ArticleSideCardContent(props) {
     return (
         <Link to={props.sub} className="article-link">
             <div className="article-card">
@@ -17,4 +17,4 @@ function FullArticleCard(props) {
     );
 }
 
-export default FullArticleCard;
+export default ArticleSideCardContent;

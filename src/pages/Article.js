@@ -1,12 +1,9 @@
-import FullArticle from "../components/full-article/FullArticle";
-import FullArticleSideCard from "../components/full-article-side-card/FullArticleSideCard";
-import './Article.css';
+import ArticleComponent from '../components/article-component/ArticleComponent';
 
 function Article() {
     return(
-        <div id="div-full-article-page">
-            <FullArticle/>
-            <FullArticleSideCard/>
+        <div>
+            <ArticleComponent/>
         </div>
     );
 }

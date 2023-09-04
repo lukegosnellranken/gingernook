@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import './Card.css';
-import ArticleCard from "../article-card/ArticleCard";
+import './HomeCard.css';
+import ArticleCard from "../home-card-content/HomeCardContent";
 import ReactPaginate from 'react-paginate';
 
-function Card(props) {
+function HomeCard(props) {
     let [initDataArray, setInitDataArray] = useState([]);
     console.log(initDataArray);
 
@@ -121,4 +121,4 @@ function Card(props) {
     );
 }
 
-export default Card;
+export default HomeCard;

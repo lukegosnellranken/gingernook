@@ -1,10 +1,10 @@
 import React from "react";
-import './FullArticleSideCard.css';
-import FullArticleCard from "../full-article-side-card-content/FullArticleCard";
+import './ArticleSideCard.css';
+import ArticleSideCardContent from "../article-side-card-content/ArticleSideCardContent";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function FullArticleSideCard(props) {
+function ArticleSideCard(props) {
     let [initDataArray, setInitDataArray] = useState([]);
     console.log(initDataArray);
     const { id } = useParams();
@@ -47,7 +47,7 @@ function FullArticleSideCard(props) {
             <div id="div-side-articles">      
                 {initDataArray.reverse().map((article, i) => (
                     <div key={i}>
-                        <FullArticleCard
+                        <ArticleSideCardContent
                             sub = {`/articles/${(initDataArray[initDataArray.length-(i+1)][0]).replace(/\s+/g, '-').toLowerCase()}`}
                             title = {initDataArray[initDataArray.length-(i+1)][0]}
                             image = {initDataArray[initDataArray.length-(i+1)][2]}
@@ -69,4 +69,4 @@ function FullArticleSideCard(props) {
     )
 }
 
-export default FullArticleSideCard;
+export default ArticleSideCard;

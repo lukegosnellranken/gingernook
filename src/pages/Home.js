@@ -1,9 +1,9 @@
-import ContentArea from '../components/content-area/ContentArea';
+import HomeComponent from '../components/home-component/HomeComponent';
 
 function Home() {
     return(
         <div>
-            <ContentArea/>
+            <HomeComponent/>
         </div>
     );
 }

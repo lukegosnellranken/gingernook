@@ -1,5 +1,5 @@
 import React from "react";
-import './SideCard.css';
+import './HomeSideCard.css';
 
 function SideCard(props) {
     return (
