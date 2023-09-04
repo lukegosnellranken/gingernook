@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 function ArticleSideCardContent(props) {
     return (
         <Link to={props.sub} className="article-link">
-            <div className="article-card">
-                <div className="div-image">
-                    <img src={"http://localhost:1337" + props.image} alt="" className="image" />
+            <div id="div-article-side-card-content">
+                <div id="div-article-side-card-content-image">
+                    <img src={"http://localhost:1337" + props.image} alt="" id="article-side-card-content-image" />
                 </div>
-                <div className="div-title">
-                    <p className="title">{props.title}</p>
+                <div id="div-article-side-card-content-title">
+                    <p id="p-article-side-card-content-title">{props.title}</p>
                 </div>
             </div>
         </Link>

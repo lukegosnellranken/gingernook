@@ -1,16 +1,11 @@
-.article-card {
-    /* background-color: rgb(230, 224, 224); */
+#div-article-side-card-content {
     background: none;
     width: 100%;
-    /* border-radius: 2.5%; */
-    /* box-shadow: 0em 0em .5em .5em rgba(255, 136, 0, 0.199); */
     text-align: center;
     border-bottom-width: .05em;
     border-bottom-style: dashed;
     border-bottom-color: rgb(187, 184, 184);
     display: flex;
-    padding-bottom: 1em;
-    padding-top: 1em;
     transition: background-color 1s ease-out 100ms;
 }
 
@@ -18,37 +13,30 @@
     text-decoration: none;
 }
 
-.article-card:hover {
+#div-article-side-card-content:hover {
     background-color: #d6d4d0;
 }
 
-.div-image {
-    width: 25%;
-    margin-left: .5%;
+#div-article-side-card-content-image {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.div-title {
-    width: 75%;
+#div-article-side-card-content-title {
+    width: 33.3%;
     margin-top: 1.5%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-direction: column;
 }
 
-.image {
-    border-style: solid;
-    border-width: .05em;
-    border-color: gray;
-    width: 70%;
-    /* border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
-    transform: rotate(-1deg);
-    border: solid #5c3000; */
+#article-side-card-content-image {
+    width: 100%;
 }
 
-.title {
+#p-article-side-card-content-title {
     padding: 0;
     margin: 0;
     display: flex;
@@ -104,12 +92,12 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .div-image {
+    #div-article-side-card-content-image {
         width: 40%;
         margin-left: 0%;
     }
 
-    .image {
+    #article-side-card-content-image {
         margin-left: -2em;
     }
 
@@ -124,10 +112,19 @@
     .description {
         width: 100%;
     }
+
+    #div-article-side-card-content {
+        height: 5%;
+    }
+
+    #article-side-card-content-image {
+        width: auto;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .title {
+    #p-article-side-card-content-title {
         font-size: 100%;
     }
 
@@ -141,7 +138,7 @@
 }
 
 @media screen and (max-width: 440px) {
-    .title {
+    #p-article-side-card-content-title {
         font-size: 90%;
     }
 

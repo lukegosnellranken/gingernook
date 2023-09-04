@@ -3,9 +3,12 @@ import './ArticleSideCard.css';
 import ArticleSideCardContent from "../article-side-card-content/ArticleSideCardContent";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+// import { render } from "@testing-library/react";
 
 function ArticleSideCard(props) {
     let [initDataArray, setInitDataArray] = useState([]);
+    let currentItems = initDataArray;
+    let currentArtcle = ['filler'];
     console.log(initDataArray);
     const { id } = useParams();
 
@@ -29,7 +32,7 @@ function ArticleSideCard(props) {
                     let description = data.data[i].attributes.Description;
                     iArray.push([title, dateString, image, description]);
                 }
-                setInitDataArray(iArray.reverse());
+                setInitDataArray(iArray.slice(0,10).reverse());
             })
             .catch(error => {console.log(error)});
         }
@@ -38,19 +41,20 @@ function ArticleSideCard(props) {
 
     function items() {
         // Remove current article from array
-        for (let i = 0; i < initDataArray.length; i++) { 
-            if (initDataArray[i][0].replace(/\s+/g, '-').toLowerCase() === id) {
-                initDataArray.splice(i, 1);
+        for (let i = 0; i < currentItems.length; i++) { 
+            if (currentItems[i][0].replace(/\s+/g, '-').toLowerCase() === id) {
+                currentArtcle = currentItems[i];
+                currentItems.splice(i, 1);
             }
         }
         return (
             <div id="div-side-articles">      
-                {initDataArray.reverse().map((article, i) => (
+                {currentItems.reverse().map((article, i) => (
                     <div key={i}>
                         <ArticleSideCardContent
-                            sub = {`/articles/${(initDataArray[initDataArray.length-(i+1)][0]).replace(/\s+/g, '-').toLowerCase()}`}
-                            title = {initDataArray[initDataArray.length-(i+1)][0]}
-                            image = {initDataArray[initDataArray.length-(i+1)][2]}
+                            sub = {`/articles/${(currentItems[currentItems.length-(i+1)][0]).replace(/\s+/g, '-').toLowerCase()}`}
+                            title = {currentItems[currentItems.length-(i+1)][0]}
+                            image = {currentItems[currentItems.length-(i+1)][2]}
                         />
                     </div>
                 ))}
@@ -58,11 +62,18 @@ function ArticleSideCard(props) {
         );
     }
 
+    function restoreCurrentArticle() {
+        if (!currentItems.includes(currentArtcle)) {
+            currentItems.push(currentArtcle);
+        }
+    }
+
     return (
         <div id="div-full-article-side-card">
             <div id="stitch-div">
                 <div id="content-div">
                     {items()}
+                    {restoreCurrentArticle()}
                 </div>
             </div>
         </div>
