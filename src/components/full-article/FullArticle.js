@@ -62,6 +62,9 @@ function FullArticle() {
     return (
         <div id="full-article-card">
             <div id="stitch-div">
+                <div id="div-back-link">
+                    <p id="p-back-link"><a href="http://localhost:3000/">Back to Home</a></p>
+                </div>
                 <div id="div-image-title-date">
                     <div id="div-image">
                         <img src={"http://localhost:1337" + articleDataArray[0][2]} alt="" id="p-image" />

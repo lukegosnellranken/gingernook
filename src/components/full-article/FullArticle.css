@@ -20,6 +20,24 @@
     border-color: rgb(187, 184, 184);
 }
 
+#p-back-link {
+    margin-left: 1%;
+    margin-top: .5%;
+    max-height: .75em;
+    font-family: Inter, sans-serif;
+    font-size: 100%;
+    /* text-shadow: 1px 1px 2px #5c3000; */
+}
+
+#p-back-link a {
+    text-decoration: none;
+    color: #3c2600;
+}
+
+#p-back-link a:hover {
+    text-decoration: underline;
+}
+
 #div-image-title-date {
     width: 80%;
     display: flex;
@@ -113,6 +131,10 @@
         font-size: 70%;
     }
 
+    #p-back-link {
+        font-size: 80%;
+    }
+
     #p-date {
         font-size: 70%;
     }
@@ -131,9 +153,18 @@
     #full-article-card {
         width: 95%;
     }
+
+    #p-back-link {
+        font-size: 70%;
+        margin-top: .75%;
+    }
 }
 
 @media screen and (max-width: 440px) {
+    #p-back-link {
+        font-size: 60%;
+    }
+
     #p-title {
         font-size: 90%;
     }
