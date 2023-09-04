@@ -14,10 +14,10 @@ function Background() {
                     <img id="image-bmc" src={bmc} href="#" alt="" /> 
                 </div>
                 <div id="social-links">
-                    <a id="social-links-facebook" href="#" class="fa fa-facebook social-link"></a>
-                    <a id="social-links-pinterest" href="#" class="fa fa-pinterest social-link"></a>
-                    <a id="social-links-instagram" href="#" class="fa fa-instagram social-link"></a>
-                    <a id="social-links-rss" href="#" class="fa fa-rss social-link"></a>
+                    <a id="social-links-facebook" href="https://gingernook.com/" className="fa fa-facebook social-link"> </a>
+                    <a id="social-links-pinterest" href="https://gingernook.com/" className="fa fa-pinterest social-link"> </a>
+                    <a id="social-links-instagram" href="https://gingernook.com/" className="fa fa-instagram social-link"> </a>
+                    <a id="social-links-rss" href="https://gingernook.com/" className="fa fa-rss social-link"> </a>
                 </div>
             </div>
         </div>

@@ -80,7 +80,7 @@ function ArticleCard() {
                 </div>
                 <div className="separator"></div>
                 <div id="div-content">
-                    <p id="p-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></p>
+                    <div id="p-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></div>
                 </div>
             </div>
         </div>
