@@ -8,7 +8,6 @@
     width: 66%;
     padding-left: 3%;
     padding-right: .75%;
-    
 }
 
 #side-card-div {
@@ -21,7 +20,7 @@
 #mobile-card-div {
     display: none;
     padding-left: 3%;
-    padding-right: .75%;
+    padding-right: 3%;
 }
 
 
@@ -30,6 +29,8 @@
 @media screen and (max-width: 700px) {
     #card-div {
         width: 100%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
 
     #side-card-div {

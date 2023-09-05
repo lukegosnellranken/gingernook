@@ -24,13 +24,13 @@
 
     #div-page-full-article {
         width: 100%;
-        padding-right: 3.5%;
-        padding-left: 3.5%;
+        padding-right: .75%;
+        padding-left: .75%;
     }
     
     #div-page-full-article-side-card {
         width: 100%;
-        padding-right: 5.5%;
-        padding-left: 5.5%;
+        padding-right: 3%;
+        padding-left: 3%;
     }
 }
