@@ -63,7 +63,7 @@ function ArticleCard() {
         <div id="full-article-card">
             <div id="stitch-div">
                 <div id="div-back-link">
-                    <p id="p-back-link"><a href="http://localhost:3000/">Back to Home</a></p>
+                    <p id="p-back-link"><a href="http://gingernook.com/">Back to Home</a></p>
                 </div>
                 <div id="div-image-title-date">
                     <div id="div-image">

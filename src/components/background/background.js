@@ -7,8 +7,8 @@ function Background() {
     return (
         <div>
             <div id="backgroundFrame">
-                <a href="http://localhost:3000/">
-                    {<img src={logo} alt="logo" id="logo" href="http://localhost:3000"/>}
+                <a href="http://gingernook.com/">
+                    {<img src={logo} alt="logo" id="logo" href="http://gingernook.com"/>}
                 </a>
                 <div id="div-bmc">
                     <img id="image-bmc" src={bmc} href="#" alt="" /> 
