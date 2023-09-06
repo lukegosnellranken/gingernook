@@ -13,7 +13,7 @@ function ArticleCard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            await fetch('http://localhost:1337/api/articles?populate=*')
+            await fetch('https://strapi-production-2ac8.up.railway.app/api/articles?populate=*')
             .then(res => {
                 if (res.ok) {
                     return res.json()
@@ -67,7 +67,7 @@ function ArticleCard() {
                 </div>
                 <div id="div-image-title-date">
                     <div id="div-image">
-                        <img src={"http://localhost:1337" + articleDataArray[0][2]} alt="" id="p-image" />
+                        <img src={articleDataArray[0][2]} alt="" id="p-image" />
                     </div>
                     <div id="div-title-date">
                         <div id="div-title">

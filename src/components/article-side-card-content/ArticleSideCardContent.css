@@ -97,10 +97,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-    #div-article-side-card-content-image {
-        /* width: 40%; */
-    }
-
     #div-article-side-card-content-title {
         font-size: 60%;
         /* width: 60%; */

@@ -10,7 +10,7 @@ function HomeCard(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            await fetch('http://localhost:1337/api/articles?populate=*')
+            await fetch('https://strapi-production-2ac8.up.railway.app/api/articles?populate=*')
             .then(res => {
                 if (res.ok) {
                     return res.json()
@@ -25,6 +25,7 @@ function HomeCard(props) {
                     let dateString = data.data[i].attributes.Date.replaceAll("-","/");
                     dateString = dateString.slice(5) + "/" + dateString.slice(0,4);
                     let image = data.data[i].attributes.Media.data.attributes.formats.thumbnail.url;
+                    console.log(image);
                     let description = data.data[i].attributes.Description;
                     iArray.push([title, dateString, image, description]);
                 }

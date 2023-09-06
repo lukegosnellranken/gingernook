@@ -7,7 +7,7 @@ function ArticleCard(props) {
         <Link to={props.sub} className="article-link">
             <div className="article-card">
                 <div className="div-image">
-                    <img src={"http://localhost:1337" + props.image} alt="" className="image" />
+                    <img src={props.image} alt="" className="image" />
                 </div>
                 <div className="div-title-date-description">
                     <div className="div-title">

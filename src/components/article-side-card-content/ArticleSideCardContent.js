@@ -7,7 +7,7 @@ function ArticleSideCardContent(props) {
         <Link to={props.sub} className="article-link">
             <div id="div-article-side-card-content">
                 <div id="div-article-side-card-content-image">
-                    <img src={"http://localhost:1337" + props.image} alt="" id="article-side-card-content-image" />
+                    <img src={props.image} alt="" id="article-side-card-content-image" />
                 </div>
                 <div id="div-article-side-card-content-title">
                     <p id="p-article-side-card-content-title">{props.title}</p>
