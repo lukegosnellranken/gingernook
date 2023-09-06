@@ -1,5 +1,4 @@
 import React from "react";
-import gingernooklogo from '../../images/gingernooklogonew-nobackground11.png';
 import './Nav.css';
 import './NavItem'
 import NavItem from "./NavItem";
@@ -8,12 +7,14 @@ function Nav() {
     return(
         <div className="navDiv">
             <nav className="nav">
-                <ul className="nav-list">
-                    <NavItem name="Life"/>
-                    <NavItem name="Recipes"/>
-                    <NavItem name="Our Family" href="our-family"/>
-                    <NavItem name="Resources"/>
-                </ul>
+                <div id="div-nav-list">
+                    <ul className="nav-list">
+                        <NavItem name="Life"/>
+                        <NavItem name="Recipes"/>
+                        <NavItem name="Our Family" href="our-family"/>
+                        <NavItem name="Resources"/>
+                    </ul>
+                </div>
             </nav>
         </div>
     );

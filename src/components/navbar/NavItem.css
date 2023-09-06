@@ -1,8 +1,10 @@
 .nav-list-item {
     /* color: green; */
     transition: all .2s ease-in-out; 
-    padding-left: 8%;
-    padding-right: 8%;
+    /* margin-left: 8%;
+    margin-right: 8%; */
+    width: 100%;
+    text-align: center;
 }
 
 .nav-list-item:hover {
