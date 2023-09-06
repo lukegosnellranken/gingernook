@@ -11,7 +11,7 @@ function Background() {
                     {<img src={logo} alt="logo" id="logo" href="http://gingernook.com"/>}
                 </a>
                 <div id="div-bmc">
-                    <img id="image-bmc" src={bmc} href="#" alt="" /> 
+                    <a href="https://buymeacoffee.com/gingernook" target="_blank" rel="noreferrer"><img id="image-bmc" src={bmc} alt="" /> </a>
                 </div>
                 <div id="social-links">
                     <a id="social-links-facebook" href="https://gingernook.com/" className="fa fa-facebook social-link"> </a>
