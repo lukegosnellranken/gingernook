@@ -54,7 +54,7 @@
 }
 
 #mobile-card-content {
-    font-size: 80%;
+    font-size: 100%;
     padding-left: .5em;
 }
 
@@ -67,7 +67,7 @@
     }
 
     #mobile-card-content {
-        font-size: 70%;
+        font-size: 90%;
     }
 }
 

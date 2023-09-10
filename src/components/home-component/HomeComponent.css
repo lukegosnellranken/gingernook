@@ -5,14 +5,14 @@
 
 #card-div {
     display: block;
-    width: 66%;
+    width: 70%;
     padding-left: 3%;
     padding-right: .75%;
 }
 
 #side-card-div {
     display: block;
-    width: 33%;
+    width: 30%;
     padding-left: .75%;
     padding-right: 3%;
 }

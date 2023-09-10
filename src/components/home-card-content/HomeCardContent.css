@@ -55,13 +55,14 @@
     justify-content: left;
     margin-left: 1em;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 140%;
     font-family: Inter, sans-serif;
     color: rgb(64, 65, 66);
+    text-align: left;
 }
 
 .date {
-    font-size: 70%;
+    font-size: 80%;
     color: gray;
     letter-spacing: .05em;
     padding: 0;
@@ -69,7 +70,7 @@
     padding-top: 0.5em;
     display: flex;
     justify-content: left;
-    margin-left: 2em;
+    margin-left: 2%;
     font-family: Inter, sans-serif;
 }
 
@@ -84,9 +85,8 @@
     margin-left: 1.5em;
     margin-top: .5em;
     font-family: Inter, sans-serif;
-    font-size: 80%;
+    font-size: 100% !important;
     color: rgb(64, 65, 66);
-    /* color: rgb(0, 80, 0); */
     text-align: left;
     width: 80%;
 }
@@ -128,28 +128,26 @@
 
 @media screen and (max-width: 600px) {
     .title {
-        font-size: 100%;
+        font-size: 120%;
+        padding-left: 1%;
     }
 
     .date {
-        font-size: 60%;
+        font-size: 80% !important;
     }
 
     .description {
-        font-size: 70%;
-    }
-}
-
-@media screen and (max-width: 440px) {
-    .title {
         font-size: 90%;
     }
+}
 
-    .description {
-        font-size: 65%;
+/* @media screen and (max-width: 440px) {
+    .title {
+        font-size: 90%;
+        padding-left: 4%;
     }
 
     .date {
-        font-size: 55%;
+        font-size: 70% !important;
     }
-}
+} */
