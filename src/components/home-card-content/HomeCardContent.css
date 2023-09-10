@@ -141,13 +141,32 @@
     }
 }
 
-/* @media screen and (max-width: 440px) {
+@media screen and (max-width: 500px) {
     .title {
-        font-size: 90%;
-        padding-left: 4%;
+        font-size: 100%;
+        padding-left: 1%;
     }
 
     .date {
         font-size: 70% !important;
     }
-} */
+
+    .description {
+        font-size: 80% !important;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .title {
+        font-size: 90%;
+        padding-left: 2%;
+    }
+
+    .date {
+        font-size: 70% !important;
+    }
+
+    .description {
+        font-size: 80% !important;
+    }
+}
