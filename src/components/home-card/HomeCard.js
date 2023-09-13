@@ -93,7 +93,7 @@ function HomeCard(props) {
     function Items({ currentItems }) {
         console.log("rerendered Items return!");
         return (
-            <div id="article-card-div">      
+            <div id="div-article-card">      
                 {currentItems.reverse().map((article, i) => (
                     <div key={i}>
                         <ArticleCard
@@ -110,10 +110,10 @@ function HomeCard(props) {
     }
     
     return (
-        <div id="card">
-            <div id="stitch-div">
-                <div id="title-div">
-                    <h1 id="title">{props.title}</h1>
+        <div id="div-card">
+            <div id="div-stitch">
+                <div id="div-title">
+                    <h1 id="h1-title">{props.title}</h1>
                 </div>
                 <PaginatedItems itemsPerPage={8} />
                 {console.log("rerendered Card return!")}

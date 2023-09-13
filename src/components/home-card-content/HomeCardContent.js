@@ -5,19 +5,19 @@ import { Link } from "react-router-dom";
 function ArticleCard(props) {
     return (
         <Link to={props.sub} className="article-link">
-            <div className="article-card">
-                <div className="div-image">
-                    <img src={props.image} alt="" className="image" />
+            <div id="div-home-article-card">
+                <div id="div-home-article-image">
+                    <img src={props.image} alt="" id="home-article-image" />
                 </div>
-                <div className="div-title-date-description">
-                    <div className="div-title">
-                        <p className="title">{props.title}</p>
+                <div id="div-home-article-title-date-description">
+                    <div id="div-home-article-title">
+                        <p id="p-home-article-title">{props.title}</p>
                     </div>
-                    <div className="div-date">
-                        <p className="date">{props.date}</p>
+                    <div id="div-home-article-date">
+                        <p id="p-home-article-date">{props.date}</p>
                     </div>
-                    <div className="div-description">
-                        <p className="description">{props.description}</p>
+                    <div id="div-home-article-description">
+                        <p id="p-home-article-description">{props.description}</p>
                     </div>
                 </div>
             </div>

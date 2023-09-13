@@ -38,7 +38,7 @@
     text-align: center;
 }
 
-#article-side-card-content-image {
+#image-article-side-card-content {
     width: 100%;
 }
 
@@ -79,7 +79,6 @@
     font-family: Inter, sans-serif;
     font-size: 80%;
     color: rgb(64, 65, 66);
-    /* color: rgb(0, 80, 0); */
     text-align: left;
     width: 80%;
 }
@@ -103,7 +102,6 @@
 @media screen and (max-width: 1000px) {
     #div-article-side-card-content-title {
         font-size: 60%;
-        /* width: 60%; */
     }
 }
 
@@ -150,10 +148,6 @@
 }
 
 @media screen and (max-width: 440px) {
-    /* #p-article-side-card-content-title {
-        font-size: 90%;
-    } */
-
     .description {
         font-size: 65%;
     }

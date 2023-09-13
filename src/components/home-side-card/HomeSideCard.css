@@ -71,3 +71,9 @@
     border-bottom-color: rgb(187, 184, 184);
     border-bottom-width: .1em;
 }
+
+@media screen and (max-width: 1390px) {
+    .section-title {
+        font-size: 250%;
+    }
+}

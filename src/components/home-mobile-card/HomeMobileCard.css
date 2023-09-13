@@ -12,7 +12,7 @@
     font-family: Inter, sans-serif;
 }
 
-#stitch-div {
+#div-stitch {
     margin-left: .2em;
     margin-right: .2em;
     border-width: .1em;
@@ -42,7 +42,7 @@
     margin-right: .5em; 
 }
 
-#mobile-card-title {
+#p-mobile-card-title {
     text-align: center;
     padding-top: 5%;
     font-family: Qwitcher Grypen, sans-serif;
@@ -53,7 +53,7 @@
     text-decoration: underline dashed gray 1px;
 }
 
-#mobile-card-content {
+#p-mobile-card-content {
     font-size: 100%;
     padding-left: .5em;
 }
@@ -62,27 +62,27 @@
 
 
 @media screen and (max-width: 600px) {
-    #mobile-card-title {
-        font-size: 220%;
+    #p-mobile-card-title {
+        font-size: 270%;
     }
 
-    #mobile-card-content {
+    #p-mobile-card-content {
         font-size: 90%;
     }
 }
 
-@media screen and (max-width: 500px) {
-    #mobile-card-content {
-        font-size: 80%;
+@media screen and (max-width: 545px) {
+    #p-mobile-card-title {
+        font-size: 220%;
     }
 }
 
-@media screen and (max-width: 440px) {
-    #mobile-card-title {
-        font-size: 180%;
+@media screen and (max-width: 450px) {
+    #p-mobile-card-title {
+        margin-left: -50%;
     }
 
-    #mobile-card-content {
+    #p-mobile-card-content {
         font-size: 80%;
     }
 
@@ -92,5 +92,11 @@
 
     #div-mobile-card-title-content {
         width: 65%; 
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #p-mobile-card-title {
+        margin-left: -50%;
     }
 }

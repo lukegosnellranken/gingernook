@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import './ArticleCard.css';
 import ReactMarkdown from 'react-markdown'
+import './ArticleCard.css';
 
 function ArticleCard() {
     let [initDataArray, setInitDataArray] = useState([]);
@@ -29,7 +29,6 @@ function ArticleCard() {
                     dateString = dateString.slice(5) + "/" + dateString.slice(0,4);
                     let image = data.data[i].attributes.Media.data.attributes.formats.thumbnail.url;
                     let content = data.data[i].attributes.Content;
-                    // console.log(content);
                     iArray.push([title, dateString, image, content]);
                 }
                 setInitDataArray(iArray.reverse());
@@ -61,7 +60,7 @@ function ArticleCard() {
 
     return (
         <div id="full-article-card">
-            <div id="stitch-div">
+            <div id="div-stitch">
                 <div id="div-back-link">
                     <p id="p-back-link"><a href="http://gingernook.com/">Back to Home</a></p>
                 </div>
@@ -79,8 +78,8 @@ function ArticleCard() {
                     </div>
                 </div>
                 <div className="separator"></div>
-                <div id="div-content">
-                    <div id="p-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></div>
+                <div id="div-main-content">
+                    <div id="p-main-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></div>
                 </div>
             </div>
         </div>

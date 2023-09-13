@@ -1,9 +1,8 @@
 import React from "react";
-import './ArticleSideCard.css';
-import ArticleSideCardContent from "../article-side-card-content/ArticleSideCardContent";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import { render } from "@testing-library/react";
+import './ArticleSideCard.css';
+import ArticleSideCardContent from "../article-side-card-content/ArticleSideCardContent";
 
 function ArticleSideCard(props) {
     let [initDataArray, setInitDataArray] = useState([]);
@@ -73,8 +72,8 @@ function ArticleSideCard(props) {
 
     return (
         <div id="div-full-article-side-card">
-            <div id="stitch-div">
-                <div id="content-div">
+            <div id="div-stitch">
+                <div id="div-content">
                     {items()}
                     {restoreCurrentArticle()}
                 </div>

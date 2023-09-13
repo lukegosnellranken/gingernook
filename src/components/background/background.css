@@ -4,7 +4,7 @@
     filter: brightness(50%);
 }
 
-#logo {
+#image-logo {
     position: absolute;
     left: 0;
     top: 0;
@@ -16,7 +16,7 @@
     min-width: 8em;
 }
 
-#backgroundFrame {
+#div-backgroundFrame {
     position: relative;
     width: 100%;
     height: 12em;
@@ -41,7 +41,7 @@
     transform: scale(1.05);
 }
 
-#social-links {
+#div-social-links {
     position: absolute;
     bottom: .75em;
     right: 2em;
@@ -62,8 +62,6 @@
 
 #social-links-facebook {
     text-decoration: none;
-    /* color: white;
-    background-color: blue; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
@@ -78,8 +76,6 @@
 
 #social-links-pinterest {
     text-decoration: none;
-    /* color: white;
-    background-color: red; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
@@ -95,8 +91,6 @@
 
 #social-links-instagram {
     text-decoration: none;
-    /* color: white;
-    background-color: purple; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
@@ -112,8 +106,6 @@
 
 #social-links-rss {
     text-decoration: none;
-    /* color: white;
-    background-color: orange; */
     font-size: 120%;
     margin-left: .5em;
     border-radius: 50%;
@@ -140,7 +132,7 @@
 
 
 @media screen and (max-width: 800px) {
-    #backgroundFrame {
+    #div-backgroundFrame {
         margin-top: -.5em;
     }
 
@@ -166,7 +158,7 @@
 }
 
 @media screen and (max-width: 440px) {
-    #backgroundFrame {
+    #div-backgroundFrame {
         margin-top: -1em;
     }
 }
