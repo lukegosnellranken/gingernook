@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './ArticleSideCardContent.css';
 
 function ArticleSideCardContent(props) {
+    window.scrollTo(0, 0);
     return (
         <Link to={props.sub} className="article-link">
             <div id="div-articlesidecardcontent-container">
