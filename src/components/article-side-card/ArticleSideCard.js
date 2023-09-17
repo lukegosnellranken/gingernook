@@ -47,7 +47,7 @@ function ArticleSideCard(props) {
             }
         }
         return (
-            <div id="div-side-articles">      
+            <div id="div-articlesidecard-one-item">      
                 {currentItems.reverse().map((article, i) => (
                     <div key={i}>
                         <ArticleSideCardContent
@@ -71,9 +71,9 @@ function ArticleSideCard(props) {
     }
 
     return (
-        <div id="div-full-article-side-card">
-            <div id="div-stitch">
-                <div id="div-content">
+        <div id="div-articlesidecard-all-items">
+            <div id="div-articlesidecard-stitch">
+                <div id="div-articlesidecard-content">
                     {items()}
                     {restoreCurrentArticle()}
                 </div>

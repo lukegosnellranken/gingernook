@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import './HomeCard.css';
-import ArticleCard from "../home-card-content/HomeCardContent";
+import HomeCardContent from "../home-card-content/HomeCardContent";
 import ReactPaginate from 'react-paginate';
 
 function HomeCard(props) {
@@ -54,15 +54,15 @@ function HomeCard(props) {
         // Invoke when user click to request another page.
         const handlePageClick = (event) => {
             const newOffset = event.selected * itemsPerPage % initDataArray.length;
-            console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
+            // console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
             setItemOffset(newOffset);
         };
 
         return (
-            <div id="div-items-pagination">
-                <div id="div-items">
+            <div id="div-homecard-items-pagination">
+                <div id="div-homecard-items">
                     <Items currentItems={currentItems} />
-                    <div id="div-pagination">
+                    <div id="div-homecard-pagination">
                         <ReactPaginate
                             nextLabel=">"
                             onPageChange={handlePageClick}
@@ -93,10 +93,10 @@ function HomeCard(props) {
     function Items({ currentItems }) {
         console.log("rerendered Items return!");
         return (
-            <div id="div-article-card">      
+            <div id="div-homecard-article-card">      
                 {currentItems.reverse().map((article, i) => (
                     <div key={i}>
-                        <ArticleCard
+                        <HomeCardContent
                             sub = {`/articles/${(currentItems[currentItems.length-(i+1)][0]).replace(/\s+/g, '-').toLowerCase()}`}
                             title = {currentItems[currentItems.length-(i+1)][0]}
                             date = {currentItems[currentItems.length-(i+1)][1]}
@@ -110,10 +110,10 @@ function HomeCard(props) {
     }
     
     return (
-        <div id="div-card">
-            <div id="div-stitch">
-                <div id="div-title">
-                    <h1 id="h1-title">{props.title}</h1>
+        <div id="div-homecard-card">
+            <div id="div-homecard-stitch">
+                <div id="div-homecard-title">
+                    <h1 id="h1-homecard-title">{props.title}</h1>
                 </div>
                 <PaginatedItems itemsPerPage={8} />
                 {console.log("rerendered Card return!")}

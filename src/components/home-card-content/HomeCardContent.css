@@ -1,4 +1,4 @@
-#div-home-article-card {
+#div-homecardcontent-container {
     background: none;
     width: 100%;
     text-align: center;
@@ -15,11 +15,11 @@
     text-decoration: none;
 }
 
-#div-home-article-card:hover {
+#div-homecardcontent-container:hover {
     background-color: #d6d4d0;
 }
 
-#div-home-article-image {
+#div-homecardcontent-image {
     width: 25%;
     margin-left: .5%;
     display: flex;
@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-#div-home-article-title-date-description {
+#div-homecardcontent-title-date-description {
     width: 75%;
     margin-top: 1.5%;
     display: flex;
@@ -35,14 +35,14 @@
     flex-direction: column;
 }
 
-#home-article-image {
+#image-homecardcontent-image {
     border-style: solid;
     border-width: .05em;
     border-color: gray;
     width: 70%;
 }
 
-#p-home-article-title {
+#p-homecardcontent-title {
     padding: 0;
     margin: 0;
     display: flex;
@@ -55,7 +55,7 @@
     text-align: left;
 }
 
-#p-home-article-date {
+#p-homecardcontent-date {
     font-size: 80%;
     color: gray;
     letter-spacing: .05em;
@@ -68,12 +68,12 @@
     font-family: Inter, sans-serif;
 }
 
-#div-home-article-description {
+#div-homecardcontent-description {
     display: flex;
     justify-content: left;
 }
 
-#p-home-article-description {
+#p-homecardcontent-description {
     padding: 0;
     margin: 0;
     margin-left: 1.5em;
@@ -92,22 +92,22 @@
 
 
 @media screen and (max-width: 1200px) {
-    #div-home-article-description {
+    #div-homecardcontent-description {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    #div-home-article-image {
+    #div-homecardcontent-image {
         width: 40%;
         margin-left: 0%;
     }
 
-    #home-article-image {
+    #image-homecardcontent-image {
         margin-left: -2em;
     }
 
-    #div-home-article-title-date-description {
+    #div-homecardcontent-title-date-description {
         width: 70%;
         margin-right: .5em;
         margin-left: -2.5em;
@@ -115,37 +115,37 @@
 }
 
 @media screen and (max-width: 700px) {
-    #div-home-article-description {
+    #div-homecardcontent-description {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    #p-home-article-title {
+    #p-homecardcontent-title {
         font-size: 120%;
         padding-left: 1%;
     }
 
-    #p-home-article-date {
+    #p-homecardcontent-date {
         font-size: 80% !important;
     }
 
-    #p-home-article-description {
+    #p-homecardcontent-description {
         font-size: 90%;
     }
 }
 
 @media screen and (max-width: 450px) {
-    #p-home-article-title {
+    #p-homecardcontent-title {
         font-size: 100%;
         padding-left: 1%;
     }
 
-    #p-home-article-date {
+    #p-homecardcontent-date {
         font-size: 60% !important;
     }
 
-    #p-home-article-description {
+    #p-homecardcontent-description {
         font-size: 80%;
     }
 }

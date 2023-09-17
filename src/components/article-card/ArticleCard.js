@@ -59,27 +59,27 @@ function ArticleCard() {
     }, [initDataArray, id]);
 
     return (
-        <div id="full-article-card">
-            <div id="div-stitch">
-                <div id="div-back-link">
-                    <p id="p-back-link"><a href="http://gingernook.com/">Back to Home</a></p>
+        <div id="div-articlecard-full-article-card">
+            <div id="div-articlecard-stitch">
+                <div id="div-articlecard-back-link">
+                    <p id="p-articlecard-back-link"><a href="http://gingernook.com/">Back to Home</a></p>
                 </div>
-                <div id="div-image-title-date">
-                    <div id="div-image">
-                        <img src={articleDataArray[0][2]} alt="" id="p-image" />
+                <div id="div-articlecard-image-title-date">
+                    <div id="div-articlecard-image">
+                        <img src={articleDataArray[0][2]} alt="" id="p-articlecard-image" />
                     </div>
-                    <div id="div-title-date">
-                        <div id="div-title">
-                            <p id="p-title">{articleDataArray[0][0]}</p>
+                    <div id="div-articlecard-title-date">
+                        <div id="div-articlecard-title">
+                            <p id="p-articlecard-title">{articleDataArray[0][0]}</p>
                         </div>
-                        <div id="div-date">
-                            <p id="p-date">{articleDataArray[0][1]}</p>
+                        <div id="div-articlecard-date">
+                            <p id="p-articlecard-date">{articleDataArray[0][1]}</p>
                         </div>
                     </div>
                 </div>
                 <div className="separator"></div>
-                <div id="div-main-content">
-                    <div id="p-main-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></div>
+                <div id="div-articlecard-main-content">
+                    <div id="p-articlecard-main-content"><ReactMarkdown>{articleDataArray[0][3]}</ReactMarkdown></div>
                 </div>
             </div>
         </div>

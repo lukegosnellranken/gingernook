@@ -1,4 +1,4 @@
-#div-article-side-card-content {
+#div-articlesidecardcontent-container {
     background: none;
     width: 100%;
     text-align: center;
@@ -13,18 +13,18 @@
     text-decoration: none;
 }
 
-#div-article-side-card-content:hover {
+#div-articlesidecardcontent-container:hover {
     background-color: #d6d4d0;
 }
 
-#div-article-side-card-content-image {
+#div-articlesidecardcontent-image {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#div-article-side-card-content-title {
+#div-articlesidecardcontent-title {
     width: 50%;
     margin-top: 1.5%;
     display: flex;
@@ -34,15 +34,15 @@
     margin-right: 2.5%;
 }
 
-#p-article-side-card-content-title {
+#p-articlesidecardcontent-title {
     text-align: center;
 }
 
-#image-article-side-card-content {
+#image-articlesidecardcontent {
     width: 100%;
 }
 
-#p-article-side-card-content-title {
+#p-articlesidecardcontent-title {
     padding: 0;
     margin: 0;
     display: flex;
@@ -94,13 +94,13 @@
         width: 100%;
     }
 
-    #p-article-side-card-content-title {
+    #p-articlesidecardcontent-title {
         font-size: 70%;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    #div-article-side-card-content-title {
+    #div-articlesidecardcontent-title {
         font-size: 60%;
     }
 }
@@ -114,27 +114,27 @@
         padding-top: 0.25em;
     }
 
-    #div-article-side-card-content {
+    #div-articlesidecardcontent-container {
         height: 5%;
     }
 
-    #div-article-side-card-content-image {
+    #div-articlesidecardcontent-image {
         width: 30%;
     }
 
-    #div-article-side-card-content-title {
+    #div-articlesidecardcontent-title {
         font-size: 130%;
         width: 70%;
     }
 
-    #p-article-side-card-content-title {
+    #p-articlesidecardcontent-title {
         justify-content: center;
         
     }
 }
 
 @media screen and (max-width: 600px) {
-    #p-article-side-card-content-title {
+    #p-articlesidecardcontent-title {
         font-size: 100%;
     }
 
@@ -142,7 +142,7 @@
         font-size: 60%;
     }
 
-    #div-article-side-card-content-title {
+    #div-articlesidecardcontent-title {
         font-size: 90%;
     }
 }

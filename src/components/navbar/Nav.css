@@ -1,16 +1,8 @@
-.logoDiv {
-    width: 25%;
-}
-
-.logo {
-    max-width: 190px;
-}
-
-.navDiv {
+#div-nav-container {
     margin-top: .8%;
 }
 
-.nav {
+#nav-nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +12,7 @@
     width: 60%;
 }
 
-.nav-list {
+#ul-nav-list {
     display: flex;
     list-style-type: none;
     text-decoration: none;

@@ -5,10 +5,10 @@ import NavItem from "./NavItem";
  
 function Nav() {
     return(
-        <div className="navDiv">
-            <nav className="nav">
+        <div id="div-nav-container">
+            <nav id="nav-nav">
                 <div id="div-nav-list">
-                    <ul className="nav-list">
+                    <ul id="ul-nav-list">
                         <NavItem name="Life"/>
                         <NavItem name="Recipes"/>
                         <NavItem name="Our Family" href="our-family"/>

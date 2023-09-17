@@ -1,4 +1,4 @@
-#mobile-card {
+#div-homemobilecard-container {
     background-color: rgb(250, 246, 246);
     background-image: url('../../images/background3.png');
     border-radius: .5%;
@@ -12,7 +12,7 @@
     font-family: Inter, sans-serif;
 }
 
-#div-stitch {
+#div-homemobilecard-stitch {
     margin-left: .2em;
     margin-right: .2em;
     border-width: .1em;
@@ -20,12 +20,12 @@
     border-color: rgb(187, 184, 184);
 }
 
-#mobile-content-div {
+#div-homemobilecard-content-container {
     display: flex;
     width: 100%;
 }
 
-#div-mobile-card-image {
+#div-homemobilecard-image {
     width: 40%;
     margin-left: .5%;
     display: flex;
@@ -33,16 +33,16 @@
     align-items: flex-end;
 }
 
-#mobile-card-image {
+#image-homemobilecard-image {
     width: 100%;
 }
 
-#div-mobile-card-title-content {
+#div-homemobilecard-title-content {
     width: 60%;
     margin-right: .5em; 
 }
 
-#p-mobile-card-title {
+#p-homemobilecard-title {
     text-align: center;
     padding-top: 5%;
     font-family: Qwitcher Grypen, sans-serif;
@@ -53,7 +53,7 @@
     text-decoration: underline dashed gray 1px;
 }
 
-#p-mobile-card-content {
+#p-homemobilecard-content {
     font-size: 100%;
     padding-left: .5em;
 }
@@ -62,41 +62,41 @@
 
 
 @media screen and (max-width: 600px) {
-    #p-mobile-card-title {
+    #p-homemobilecard-title {
         font-size: 270%;
     }
 
-    #p-mobile-card-content {
+    #p-homemobilecard-content {
         font-size: 90%;
     }
 }
 
 @media screen and (max-width: 545px) {
-    #p-mobile-card-title {
+    #p-homemobilecard-title {
         font-size: 220%;
     }
 }
 
 @media screen and (max-width: 450px) {
-    #p-mobile-card-title {
+    #p-homemobilecard-title {
         margin-left: -50%;
     }
 
-    #p-mobile-card-content {
+    #p-homemobilecard-content {
         font-size: 80%;
     }
 
-    #div-mobile-card-image {
+    #div-homemobilecard-image {
         width: 35%;
     }
 
-    #div-mobile-card-title-content {
+    #div-homemobilecard-title-content {
         width: 65%; 
     }
 }
 
 @media screen and (max-width: 370px) {
-    #p-mobile-card-title {
+    #p-homemobilecard-title {
         margin-left: -50%;
     }
 }

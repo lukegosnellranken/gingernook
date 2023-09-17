@@ -1,4 +1,4 @@
-#div-card {
+#div-homecard-card {
     background-color: rgb(250, 246, 246);
     background-image: url('../../images/background3.png');
     border-radius: .5%;
@@ -9,7 +9,7 @@
     padding-bottom: .2em;
 }
 
-#stitch-div {
+#stitch-homecard-div {
     margin-left: .2em;
     margin-right: .2em;
     border-width: .1em;
@@ -17,7 +17,7 @@
     border-color: rgb(187, 184, 184);
 }
 
-#h1-title {
+#h1-homecard-title {
     color: #3c2600;
     text-shadow: 1px 1px 2px #5c3000;
     font-family: Qwitcher Grypen, sans-serif;
@@ -29,25 +29,25 @@
     text-decoration: underline dashed gray 1px;
 }
 
-#div-title {
+#div-homecard-title {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-#div-article-card {
+#div-homecard-article-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 2em;
 }
 
-#div-pagination {
+#div-homecard-pagination {
     display: flex;
     justify-content: center;
 }
 
-#div-items-pagination {
+#div-homecard-items-pagination {
     display: block;
 }
 
@@ -86,26 +86,26 @@
     border-color: gray;
 }
 
-#div-pagination {
+#div-homecard-pagination {
     padding-bottom: 1em;
 }
 
 
 
 @media screen and (max-width: 700px) {
-    #div-card {
+    #div-homecard-card {
         margin-top: 1em;
     }
 }
 
 @media screen and (max-width: 600px) {
-    #h1-title {
+    #h1-homecard-title {
         font-size: 270%;
     }
 }
 
 @media screen and (max-width: 545px) {
-    #h1-title {
+    #h1-homecard-title {
         font-size: 220%;
     }
 }

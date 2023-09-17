@@ -5,12 +5,12 @@ import './ArticleSideCardContent.css';
 function ArticleSideCardContent(props) {
     return (
         <Link to={props.sub} className="article-link">
-            <div id="div-article-side-card-content">
-                <div id="div-article-side-card-content-image">
-                    <img src={props.image} alt="" id="image-article-side-card-content" />
+            <div id="div-articlesidecardcontent-container">
+                <div id="div-articlesidecardcontent-image">
+                    <img src={props.image} alt="" id="image-articlesidecardcontent" />
                 </div>
-                <div id="div-article-side-card-content-title">
-                    <p id="p-article-side-card-content-title">{props.title}</p>
+                <div id="div-articlesidecardcontent-title">
+                    <p id="p-articlesidecardcontent-title">{props.title}</p>
                 </div>
             </div>
         </Link>

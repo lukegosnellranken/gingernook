@@ -1,23 +1,23 @@
-#home-container {
+#homecomponent-container {
     display: flex;
     justify-content: center;
 }
 
-#card-div {
+#div-homecomponent-card {
     display: block;
     width: 70%;
     padding-left: 3%;
     padding-right: .75%;
 }
 
-#side-card-div {
+#div-homecomponent-side-card {
     display: block;
     width: 30%;
     padding-left: .75%;
     padding-right: 3%;
 }
 
-#mobile-card-div {
+#div-homecomponent-mobile-card {
     display: none;
     padding-left: 3%;
     padding-right: 3%;
@@ -27,22 +27,22 @@
 
 
 @media screen and (max-width: 700px) {
-    #card-div {
+    #div-homecomponent-card {
         width: 100%;
         padding-left: 3%;
         padding-right: 3%;
     }
 
-    #side-card-div {
+    #div-homecomponent-side-card {
         display: none;
     }
 
-    #mobile-card-div {
+    #div-homecomponent-mobile-card {
         display: block;
         width: 100%;
     }
 
-    #home-container {
+    #homecomponent-container {
         display: flex;
         flex-direction: column;
     }

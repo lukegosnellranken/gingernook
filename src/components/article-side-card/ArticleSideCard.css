@@ -1,4 +1,4 @@
-#div-full-article-side-card {
+#div-articlesidecard-all-items {
     background-color: rgb(250, 246, 246);
     background-image: url('../../images/background3.png');
     width: 100%;
@@ -12,7 +12,7 @@
     padding-bottom: .2em;
 }
 
-#div-stitch {
+#div-articlesidecard-stitch {
     margin-left: .2em;
     margin-right: .2em;
     border-width: .1em;

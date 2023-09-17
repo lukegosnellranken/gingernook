@@ -9,20 +9,20 @@ import beans from '../../images/coffee-beans5.png';
 
 function HomeComponent() {
     return (
-        <div id="home-container">
-            <div id="mobile-card-div">
+        <div id="homecomponent-container">
+            <div id="div-homecomponent-mobile-card">
                 <HomeMobileCard
                     title1 = "Welcome to Ginger Nook!"
                     image1 = {sidmobile}
                     description1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit vestibulum aliquam. Integer sed luctus mauris, in eleifend est. Praesent aliquet orci nec nisi iaculis pharetra. Donec aliquam neque sit amet laoreet auctor."
                 />
             </div>
-            <div id="card-div">
+            <div id="div-homecomponent-card">
                 <HomeCard
                     title = "Writings from the Cribside"
                 />
             </div>
-            <div id="side-card-div">
+            <div id="div-homecomponent-side-card">
                 <HomeSideCard
                     title1 = "Welcome to Ginger Nook!"
                     image1 = {sid}

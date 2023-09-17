@@ -4,11 +4,11 @@ import './ArticleComponent.css';
 
 function ArticleComponent() {
     return(
-        <div id="div-full-article-page">
-            <div id="div-page-full-article">
+        <div id="div-articlecomponent-full-article-container">
+            <div id="div-articlecomponent-full-article">
                 <ArticleCard/>
             </div>
-            <div id="div-page-full-article-side-card">
+            <div id="div-articlecomponent-full-article-side-card">
                 <ArticleSideCard/>
             </div>
         </div>

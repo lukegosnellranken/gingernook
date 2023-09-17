@@ -3,7 +3,7 @@ import './NavItem.css';
 
 function NavItem(props) {
     return (
-        <li className="nav-list-item"><a href={"http://gingernook.com/" + props.href}>{props.name}</a></li>
+        <li id="li-nav-item"><a href={"http://gingernook.com/" + props.href}>{props.name}</a></li>
     )
 }
 
